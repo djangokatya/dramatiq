@@ -114,7 +114,7 @@ class RabbitmqBroker(Broker):
             self.parameters = pika.ConnectionParameters(**kwargs)
 
         self.confirm_delivery = confirm_delivery
-        self.max_priority = max_priority
+        self.max_priority = 255
         self.connections = set()
         self.channels = set()
         self.queues = set()
