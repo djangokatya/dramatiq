@@ -47,6 +47,7 @@ def get_broker() -> "Broker":
                 port=5672,
                 heartbeat=5,
                 connection_attempts=5,
+                max_priority=255,
                 blocked_connection_timeout=30,
             ))
         except ImportError:
